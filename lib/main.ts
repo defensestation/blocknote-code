@@ -1,1 +1,1 @@
-export {CodeBlock} from "./CodeBlock"
+export {CodeBlock, insertCode} from "./CodeBlock"
