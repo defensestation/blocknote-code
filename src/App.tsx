@@ -20,6 +20,7 @@ const App = (props: React.PropsWithChildren) => {
   });
 
   return (
+    <div style={{height: "100vh", width: "100vw", background: "#ffffff", padding:"20px"}}>
     <BlockNoteView
       // onChange={() => console.log(editor.document)}
       theme={"light"}
@@ -39,6 +40,7 @@ const App = (props: React.PropsWithChildren) => {
         }
       />
     </BlockNoteView>
+    </div>
   );
 };
 
