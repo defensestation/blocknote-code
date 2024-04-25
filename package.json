@@ -8,7 +8,7 @@
     "blocknote",
     "editor"
   ],
-  "version": "1.0.1",
+  "version": "1.0.3",
   "type": "module",
   "main": "dist/main.js",
   "types": "dist/main.d.ts",
@@ -44,7 +44,6 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "@types/jest": "^29.5.12",
-    "@types/mermaid": "^9.2.0",
     "@types/node": "^20.11.20",
     "@types/react": "^18.2.56",
     "@types/react-dom": "^18.2.19",
