@@ -1,5 +1,5 @@
 import { createReactBlockSpec } from "@blocknote/react";
-import { BlockNoteEditor, defaultBlockSpecs, insertOrUpdateBlock } from "@blocknote/core";
+import { BlockNoteEditor, insertOrUpdateBlock } from "@blocknote/core";
 import { MdCode } from "react-icons/md";
 import ReactCodeMirror from "@uiw/react-codemirror";
 import { langs } from "@uiw/codemirror-extensions-langs";
@@ -10,7 +10,6 @@ export const CodeBlock = createReactBlockSpec(
   {
     type: TYPE,
     propSchema: {
-      ...defaultBlockSpecs,
       data: {
         //@ts-ignore
         language: "javascript",
@@ -44,6 +43,13 @@ export const CodeBlock = createReactBlockSpec(
           height="200px"
           onChange={onInputChange}
         />
+      );
+    },
+    toExternalHTML: ({ block }) => {
+      return (
+        <pre>
+          <code>{block?.props?.data}</code>
+        </pre>
       );
     },
   }
